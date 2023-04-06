@@ -49,13 +49,24 @@ obj <- FindNeighbors_akNN(obj,
 
 `dims` Dimensions of reduction to use. Default is 50
 
-<a name="Incorporate with Seurat"/>
+<a name="incorporate with Seurat"/>
 
 # Incorporate with Seurat
 
 ```R
 load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
-obj <- FindNeighbors_aKNN(obj)
+obj <- FindNeighbors_akNN(obj)
 obj <- FindClusters(obj,graph.name = "akNN",resolution = 0.1,verbose = F)
+
+#corrsponding kNN construction method
+obj <- FindNeighbors(obj,nn.method = "rann",dims = 1:50,verbose = F)
+obj <- FindClusters(obj,graph.name = "RNA_snn",verbose = F,resolution = 0.1)
+
+#plot
+library(ggplot2)
+p1 <- DimPlot(obj,label = T,repel=T,reduction = "pca",group.by="Ref")+ggtitle("Ref")+NoLegend()
+p2 <- DimPlot(obj,label = T,repel=T,reduction = "pca",group.by="akNN_res.0.1")+ggtitle("akNN")+NoLegend()
+p3 <- DimPlot(obj,label = T,repel=T,reduction = "pca",group.by="RNA_snn_res.0.1")+ggtitle("kNN")+NoLegend()
+p1+p2+p3
 ```
 
