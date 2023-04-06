@@ -43,7 +43,7 @@ obj <- FindNeighbors_akNN(obj,
 
 `prune` The cutoff for adjusted Jaccard index when computing the neighborhood overlap for the SNN construction. Any edges with values less than or equal to this will be set to 0 and removed from the SNN graph. Default is 1/15
 
-`delta` The parameter to adjust the degree of changes in ascending distance distribution. Default is -0.5
+`delta` The similarity weight to adjust the degree of changes in ascending distance distribution. Default is -0.5
 
 `dims` Dimensions of reduction to use. Default is 50
 
