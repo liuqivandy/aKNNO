@@ -4,8 +4,7 @@
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Example](#example)
-* [Example](#example)
-
+* [Incorporate with Seurat](#Incorporate with Seurat)
 
 <a name="introduction"/>
 
@@ -15,11 +14,15 @@ akNN is a R package to perform an adjusted k-Nearst-Neighbors graph construction
 
 <a name="installation"/>
 
+# Installation
+
 ```
 devtools::install_github("JiaLiVUMC/akNN")
 ```
 
 <a name="Example"/>
+
+# Example
 
 akNN uses the PCA matrix in Seurat object as input and return a graph object name as 'akNN'.
 
@@ -45,3 +48,14 @@ obj <- FindNeighbors_akNN(obj,
 `delta` Default is -0.5
 
 `dims` Dimensions of reduction to use. Default is 50
+
+<a name="Incorporate with Seurat"/>
+
+# Incorporate with Seurat
+
+```R
+load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
+obj <- FindNeighbors_aKNN(obj)
+sub <- FindClusters(sub,graph.name = "aKNN",resolution = 0.1,verbose = F)
+```
+
