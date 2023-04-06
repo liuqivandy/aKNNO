@@ -70,7 +70,7 @@ p1+p2+p3
 ```
 
 <p align="center">
-  <img width="800"  src="https://github.com/JiaLiVUMC/scMRMA/blob/main/Database_TcellAI.png">
+  <img width="800"  src="https://github.com/JiaLiVUMC/akNN/blob/main/PBMC_toy.png">
 </p>
 
 
