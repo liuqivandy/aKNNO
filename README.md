@@ -4,7 +4,7 @@
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Example](#example)
-* [Incorporate_with_Seurat](#incorporate_with_Seurat)
+* [Incorporate with Seurat](#incorporate_with_Seurat)
 
 <a name="introduction"/>
 
