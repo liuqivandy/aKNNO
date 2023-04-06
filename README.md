@@ -27,8 +27,6 @@ devtools::install_github("JiaLiVUMC/akNN")
 akNN uses the PCA matrix in Seurat object as input and return a graph object name as 'akNN'.
 
 ```R
-library(akNN)
-load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
 obj <- FindNeighbors_akNN(obj,
                           reduction = "pca",
                           knn=20,
@@ -54,6 +52,7 @@ obj <- FindNeighbors_akNN(obj,
 # Incorporate with Seurat
 
 ```R
+library(akNN)
 load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
 obj <- FindNeighbors_akNN(obj)
 obj <- FindClusters(obj,graph.name = "akNN",resolution = 0.1,verbose = F)
