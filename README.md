@@ -3,7 +3,7 @@
 ==========
 * [Introduction](#introduction)
 * [Installation](#installation)
-* [Example](#example)
+* [Function](#Function)
 * [Incorporate with Seurat](#incorporate_with_Seurat)
 
 <a name="introduction"/>
@@ -20,9 +20,9 @@ akNN is a R package to perform an adjusted k-Nearst-Neighbors graph construction
 devtools::install_github("JiaLiVUMC/akNN")
 ```
 
-<a name="Example"/>
+<a name="Function"/>
 
-# Example
+# Function
 
 akNN uses the PCA matrix in Seurat object as input and return a graph object name as 'akNN'.
 
