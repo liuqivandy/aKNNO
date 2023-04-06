@@ -4,7 +4,7 @@
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Example](#example)
-* [Incorporate with Seurat](#Incorporate with Seurat)
+* [Incorporate with Seurat](#incorporate with Seurat)
 
 <a name="introduction"/>
 
@@ -56,6 +56,6 @@ obj <- FindNeighbors_akNN(obj,
 ```R
 load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
 obj <- FindNeighbors_aKNN(obj)
-sub <- FindClusters(sub,graph.name = "aKNN",resolution = 0.1,verbose = F)
+obj <- FindClusters(obj,graph.name = "akNN",resolution = 0.1,verbose = F)
 ```
 
