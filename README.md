@@ -4,7 +4,7 @@
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Example](#example)
-* [Incorporate with Seurat](#incorporate with Seurat)
+* [Incorporate_with_Seurat](#incorporate_with_Seurat)
 
 <a name="introduction"/>
 
@@ -49,7 +49,7 @@ obj <- FindNeighbors_akNN(obj,
 
 `dims` Dimensions of reduction to use. Default is 50
 
-<a name="incorporate with Seurat"/>
+<a name="incorporate_with_Seurat"/>
 
 # Incorporate with Seurat
 
