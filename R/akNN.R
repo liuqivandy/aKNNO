@@ -20,7 +20,7 @@
 FindNeighbors_akNN<-function(obj,reduction="pca",knn=20,prune=1/15,delta=-0.5,dims=50){
 
   pcatmp<-Embeddings(obj,reduction=reduction)
-  pcatmp <- pcatmp[,1:max(dims,dim(pcatmp)[2])]
+  pcatmp <- pcatmp[,1:min(dims,dim(pcatmp)[2])]
   nnmtx<-nn2(pcatmp,k = knn+1)
   ind<-t(apply(nnmtx$nn.dists,1,function(x){x<(sum(sqrt(x))/(knn-1-delta))^2}))
   ind<-ind[,-ncol(ind)]
