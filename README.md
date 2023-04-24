@@ -10,14 +10,14 @@
 
 # Introduction
 
-akNN is a R package to perform an adjusted k-Nearst-Neighbors graph construction for the clustering of scRNAseq Data. 
+akNN is a R package to perform an optimized adaptive k-Nearst-Neighbors graph construction for single-cell and spatial transcriptomics clustering.
 
 <a name="installation"/>
 
 # Installation
 
 ```
-devtools::install_github("JiaLiVUMC/akNN")
+devtools::install_github("liuqivandy/aKNNO")
 ```
 
 <a name="Function"/>
