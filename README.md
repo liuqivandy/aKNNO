@@ -10,7 +10,7 @@
 
 # Introduction
 
-akNN is a R package to perform an optimized adaptive k-Nearst-Neighbors graph construction for single-cell and spatial transcriptomics clustering.
+aKNNO is a R package to perform an optimized adaptive k-Nearst-Neighbors graph construction for single-cell and spatial transcriptomics clustering.
 
 <a name="installation"/>
 
