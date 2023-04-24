@@ -1,4 +1,4 @@
-# akNN
+# aKNNO
 
 ==========
 * [Introduction](#introduction)
