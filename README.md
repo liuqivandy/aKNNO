@@ -36,10 +36,10 @@ obj <- FindNeighbors_aKNNO(obj)
 
 # Tutorial
 
-
+- [Analyze Mouse Instestinal Epithelium scRNAseq data](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/mouseInstestine.html)
 
 
 <a name="Citation"/>
 
 # Citation
-Jia Li, Yu Shyr#, Qi Liu#. Clustering of Single-cell and Spatial Transcriptomics with an Optimized Adaptive K-nearest Neighbors Graph
+Jia Li, Yu Shyr, Qi Liu. Clustering of Single-cell and Spatial Transcriptomics with an Optimized Adaptive K-nearest Neighbors Graph
