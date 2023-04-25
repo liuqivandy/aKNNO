@@ -1,12 +1,12 @@
-Package: akNN
+Package: aKNNO
 Type: Package
-Title: An Adjusted K-Nearst-Neighbors Graph Construction Method for the Clustering of Single Cell RNA Sequencing Data
+Title: An Optimized Adaptive K-Nearst-Neighbor Graphfor Clustering of Single Cell and Spatial Transcriptomics Data
 Version: 1.0
-Authors: Jia Li (jia.li.1@vumc.org), Qi Liu (qi.liu@vumc.org)
-Description: An adaptive approach to specify different k values for different points so that points in rare clusters have a lower k value and points in major clusters have a higher k value. 
+Authors: Jia Li (jia.li.1@vumc.org), Qi Liu (qi.liu@vanderbilt.edu or qi.liu@vumc.org)
+Description: k is chosen adaptively for each cell/spots based on its local distance distribution
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.6), Seurat, RANN, Matrix (>= 1.2)
-Imports: Seurat, RANN, Matrix (>= 1.2)
+Depends: R (>= 3.6), Seurat,  Matrix (>= 1.2), ggplot2, dplyr, tidyr
+Imports: RANN
 RoxygenNote: 7.2.1
