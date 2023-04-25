@@ -374,8 +374,8 @@ epithelium using aKNNO</h1>
 data</a></li>
 <li><a href="#process-the-data" id="toc-process-the-data">Process the
 data</a></li>
-<li><a href="#clustering-based-on-aknno-the-adaptive-nearest-neighbor-graph-with-optimization" id="toc-clustering-based-on-aknno-the-adaptive-nearest-neighbor-graph-with-optimization">Clustering
-based on aKNNO (the adaptive nearest-neighbor graph with
+<li><a href="#clustering-based-on-aknno-the-adaptive-k-nearest-neighbor-graph-with-optimization" id="toc-clustering-based-on-aknno-the-adaptive-k-nearest-neighbor-graph-with-optimization">Clustering
+based on aKNNO (the adaptive k-nearest neighbor graph with
 optimization)</a></li>
 <li><a href="#comparision-between-aknno-knn-and-knn_high" id="toc-comparision-between-aknno-knn-and-knn_high">Comparision between
 aKNNO, KNN and KNN_high</a></li>
@@ -403,14 +403,14 @@ data&lt;-data[,grep(&quot;epi3&quot;,colnames(data))]</code></pre>
 obj&lt;-CreateSeuratObject(counts=data,min.cells=3,min.features=200)
 obj &lt;- NormalizeData(obj) %&gt;% FindVariableFeatures() %&gt;% ScaleData() %&gt;% RunPCA() %&gt;% RunUMAP(dims=1:50)</code></pre>
 </div>
-<div id="clustering-based-on-aknno-the-adaptive-nearest-neighbor-graph-with-optimization" class="section level2">
-<h2>Clustering based on aKNNO (the adaptive nearest-neighbor graph with
-optimization)</h2>
-<pre class="r"><code># build the optimized adaptive nearest-neighbor graph
+<div id="clustering-based-on-aknno-the-adaptive-k-nearest-neighbor-graph-with-optimization" class="section level2">
+<h2>Clustering based on aKNNO (the adaptive k-nearest neighbor graph
+with optimization)</h2>
+<pre class="r"><code># build the optimized adaptive k-nearest neighbor graph
 
 obj&lt;-FindNeighbors_aKNNO(obj,verbose = F)
 
-# clustering on the optimized adaptive nearest-neighbor graph
+# clustering on the optimized adaptive k-nearest neighbor graph
 
 obj&lt;-FindClusters(obj,graph.name=&quot;aKNN_O&quot;,verbose=F)
 
@@ -426,7 +426,7 @@ p1+p2</code></pre>
 <pre class="r"><code># build the k-nearest neighbor graph using the same number of dims (1:50) and the method (rann) in the aKNNO 
 obj&lt;-FindNeighbors(obj,nn.method=&quot;rann&quot;,dims=1:50,verbose=F)
 
-# clustering based on KNN at the default resolution of 0.8 and a high resolution of 2 
+# clustering based on kNN at the default resolution of 0.8 and a high resolution of 2 
 obj&lt;-FindClusters(obj,verbose=F)
 obj&lt;-FindClusters(obj,resolution=2,verbose=F)
 
