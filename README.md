@@ -5,7 +5,7 @@
 * [Installation](#Installation)
 * [Function](#Function)
 * [Tutorial](#Tutorial)
-* [Citation] (#Citation)
+* [Citation](#Citation)
 
 <a name="Introduction"/>
 
