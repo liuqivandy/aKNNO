@@ -28,7 +28,7 @@ devtools::install_github("liuqivandy/aKNNO")
 aKNNO uses the PCA in a Seurat object to calculate distances and return a Seurat object with an optimized adaptive nearest neighbor graph (name as aKNN_O) stored in the respective slot
 
 ```R
-obj <- FindNeighbors_aKNN(obj)
+obj <- FindNeighbors_aKNNO(obj)
 ```
 
 
@@ -42,3 +42,4 @@ obj <- FindNeighbors_aKNN(obj)
 <a name="Citation"/>
 
 # Citation
+Jia Li, Yu Shyr#, Qi Liu#. Clustering of Single-cell and Spatial Transcriptomics with an Optimized Adaptive K-nearest Neighbors Graph
