@@ -7,13 +7,13 @@
 * [Tutorial](#Tutorial)
 * [Citation] (#Citation)
 
-<a name="introduction"/>
+<a name="Introduction"/>
 
 # Introduction
 
 aKNNO is a R package to build an optimized adaptive k-Nearst-Neighbor graph for single-cell and spatial transcriptomics clustering.
 
-<a name="installation"/>
+<a name="Installation"/>
 
 # Installation
 
@@ -37,8 +37,8 @@ obj <- FindNeighbors_aKNN(obj)
 # Tutorial
 
 
-<p align="center">
-  <img width="800"  src="https://github.com/JiaLiVUMC/akNN/blob/main/PBMC_toy.png">
-</p>
 
 
+<a name="Citation"/>
+
+# Citation
