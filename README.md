@@ -1,8 +1,8 @@
 # aKNNO
 
 ==========
-* [Introduction](#introduction)
-* [Installation](#installation)
+* [Introduction](#Introduction)
+* [Installation](#Installation)
 * [Function](#Function)
 * [Incorporate with Seurat](#incorporate_with_Seurat)
 
@@ -10,7 +10,7 @@
 
 # Introduction
 
-aKNNO is a R package to build an optimized adaptive k-Nearst-Neighbors graph for single-cell and spatial transcriptomics clustering.
+aKNNO is a R package to build an optimized adaptive k-Nearst-Neighbor graph for single-cell and spatial transcriptomics clustering.
 
 <a name="installation"/>
 
