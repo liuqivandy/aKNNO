@@ -24,7 +24,7 @@ devtools::install_github("liuqivandy/aKNNO")
 
 # Function
 
-akNN uses the PCA matrix in Seurat object as input and return a graph object name as 'akNN'.
+aKNN uses the PCA matrix in Seurat object as input and return a seurat object with an adaptive nearest neighbor graph (name as aKNN) stored in the respective slot
 
 ```R
 obj <- FindNeighbors_aKNN(obj,
