@@ -10,7 +10,7 @@
 
 # Introduction
 
-aKNNO is a R package to perform an optimized adaptive k-Nearst-Neighbors graph construction for single-cell and spatial transcriptomics clustering.
+aKNNO is a R package to build an optimized adaptive k-Nearst-Neighbors graph for single-cell and spatial transcriptomics clustering.
 
 <a name="installation"/>
 
@@ -27,25 +27,25 @@ devtools::install_github("liuqivandy/aKNNO")
 akNN uses the PCA matrix in Seurat object as input and return a graph object name as 'akNN'.
 
 ```R
-obj <- FindNeighbors_akNN(obj,
+obj <- FindNeighbors_aKNN(obj,
                           reduction = "pca",
-                          knn=20,
-                          prune=1/15,
+                          kmax=20,
+                          prune.SNN=1/15,
                           delta=-0.5,
-                          dims=50)
+                          dims=1:50)
 ```
 
-`obj` An Seurat object
+`obj` A Seurat object
 
-`redunction` Name of reduction to pull cell embeddings for. Default is 'pca'
+`redunction` Reduction to calculate the distance. Default is 'pca'
 
-`knn` Defines the largest k. Default is 20
+`kmax` Defines the largest k. Default is 20
 
-`prune` The cutoff for adjusted Jaccard index when computing the neighborhood overlap for the SNN construction. Any edges with values less than or equal to this will be set to 0 and removed from the SNN graph. Default is 1/15
+`prune.SNN` The cutoff for adjusted Jaccard index when computing the neighborhood overlap for the SNN construction. Any edges with values less than or equal to this will be set to 0 and removed from the SNN graph. Default is 1/15
 
 `delta` The similarity weight to adjust the degree of changes in ascending distance distribution. Default is -0.5
 
-`dims` Dimensions of reduction to use. Default is 50
+`dims` Dimensions of reduction to use. Default is 1:50
 
 <a name="incorporate_with_Seurat"/>
 
@@ -54,8 +54,8 @@ obj <- FindNeighbors_akNN(obj,
 ```R
 library(akNN)
 load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
-obj <- FindNeighbors_akNN(obj)
-obj <- FindClusters(obj,graph.name = "akNN",resolution = 0.1,verbose = F)
+obj <- FindNeighbors_aKNN(obj)
+obj <- FindClusters(obj,graph.name = "aKNN",resolution = 0.1,verbose = F)
 
 #corrsponding kNN construction method
 obj <- FindNeighbors(obj,nn.method = "rann",dims = 1:50,verbose = F)
