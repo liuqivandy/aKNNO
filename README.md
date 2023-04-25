@@ -42,4 +42,4 @@ obj <- FindNeighbors_aKNNO(obj)
 <a name="Citation"/>
 
 # Citation
-Jia Li, Yu Shyr, Qi Liu. Clustering of Single-cell and Spatial Transcriptomics with an Optimized Adaptive K-nearest Neighbors Graph
+Jia Li, Yu Shyr, Qi Liu. Clustering of Single-cell and Spatial Transcriptomics with an Optimized Adaptive K-nearest Neighbor Graph
