@@ -11,7 +11,8 @@ FindOptimalDelta(
   cutoff = 5,
   kmax = 20,
   prune.SNN = 1/15,
-  dims = 1:50
+  dims = 1:50,
+  verbose = T
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ FindOptimalDelta(
 \item{prune.SNN}{The cutoff for acceptable Jaccard index when computing the neighborhood overlap for the SNN construction. Any edges with values less than or equal to this will be set to 0 and removed from the SNN graph. Default is 1/15}
 
 \item{dims}{Dimensions of reduction to use. Default is 1:50}
+
+\item{verbose}{Print progress message (TRUE or FALSE). Default is TRUE}
 }
 \value{
 A list containing the optimal delta (opt_delta) and a ggplot showing the increased number of communities and singletons along with the decreased delta

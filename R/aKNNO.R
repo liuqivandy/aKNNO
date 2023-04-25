@@ -31,7 +31,7 @@ FindNeighbors_aKNN<-function(obj,reduction="pca",delta=-0.5,dims=1:50,kmax=20,pr
   }
 
   pca.use <- pca.use[,dims]
-  nnmtx<-nn2(pca.use,k = kmax+1)
+  nnmtx<-RANN::nn2(pca.use,k = kmax+1)
   ind<-t(apply(nnmtx$nn.dists,1,function(x){x<(sum(sqrt(x))/(kmax-1-delta))^2}))
   ind<-ind[,-ncol(ind)]
   nnmtx$nn.idx<-nnmtx$nn.idx[,-(kmax+1)]
