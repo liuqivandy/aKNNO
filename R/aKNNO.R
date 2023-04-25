@@ -106,9 +106,9 @@ FindOptimalDelta<-function(obj,reduction="pca",delta=c(-1,0),cutoff=5,kmax=20,pr
   if (sum(diffval>cutoff)>0){
     opt_delta<-delta_val[max(which(diffval>5)+1)] } else {opt_delta=delta_val[min(which(result[,3]==0))] }
 
-  p_delta<-result %>% select(delta,communities,singleton) %>% gather(key="variable",value="Number",-delta) %>% ggplot(aes(x=delta,y=Number,col=variable))+geom_line()+geom_point()+geom_vline(xintercept=opt_delta,linetype=2)+scale_x_reverse(breaks=seq(delta[1],delta[2],0.2))+theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"), legend.title=element_blank())
+  plot_delta<-result %>% select(delta,communities,singleton) %>% gather(key="variable",value="Number",-delta) %>% ggplot(aes(x=delta,y=Number,col=variable))+geom_line()+geom_point()+geom_vline(xintercept=opt_delta,linetype=2)+scale_x_reverse(breaks=seq(delta[1],delta[2],0.2))+theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"), legend.title=element_blank())
 
- return(list(opt_delta=opt_delta,p_delta=p_delta))
+ return(list(opt_delta=opt_delta,plot_delta=plot_delta))
 }
 
 
@@ -147,7 +147,7 @@ FindNeighbors_aKNNO<-function(obj,cluster=FALSE, reduction="pca",delta=c(-1,0), 
    obj[["aKNN_O"]]<-obj@graphs$aKNN
    obj@graphs$aKNN<-NULL
 
-  obj@meta.data$aKNNO_delta<-delta_res
+  obj@misc$aKNNO_delta<-delta_res
   if (cluster) { obj<-FindClusters(obj,graph.name="aKNN_O") }
 
   return(obj)
