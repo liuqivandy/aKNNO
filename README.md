@@ -25,7 +25,7 @@ devtools::install_github("liuqivandy/aKNNO")
 
 # Function
 
-aKNNO uses the PCA in a Seurat object to calculate distances and return a Seurat object with an optimized adaptive nearest neighbor graph (name as aKNN_O) stored in the respective slot
+aKNNO uses the PCA in a Seurat object to calculate distances and return a Seurat object with an optimized adaptive nearest neighbor graph (named as aKNN_O) stored in the respective slot
 
 ```R
 obj <- FindNeighbors_aKNNO(obj)
