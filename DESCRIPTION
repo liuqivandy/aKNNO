@@ -7,6 +7,6 @@ Description: k is chosen adaptively for each cell/spots based on its local dista
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.6), Seurat,  Matrix (>= 1.2), ggplot2, dplyr, tidyr
+Depends: R (>= 4.0), Seurat,  Matrix (>= 1.2), ggplot2, dplyr, tidyr
 Imports: RANN
 RoxygenNote: 7.2.1

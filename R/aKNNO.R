@@ -11,10 +11,10 @@
 #'
 #' @return A Seurat object with a shared-adaptive-KNN graph (named as "aKNN") stored in the respective slot.
 #'
-#' @examples
 #' library(aKNNO)
-#' load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
+#' obj<-readRDS(url("https://www.dropbox.com/s/f5khi1zperqkybg/Mouse_Brain_Serial_Section1_SagittalPosterior_rawimage_object.rds?dl=1"))
 #' obj <- FindNeighbors_aKNN(obj)
+
 #' @export
 
 FindNeighbors_aKNN<-function(obj,reduction="pca",delta=-0.5,dims=1:50,kmax=20,prune.SNN=1/15){
@@ -77,8 +77,16 @@ FindNeighbors_aKNN<-function(obj,reduction="pca",delta=-0.5,dims=1:50,kmax=20,pr
 #' @param verbose Print progress message (TRUE or FALSE). Default is TRUE
 #'
 #' @return A list containing the optimal delta (opt_delta) and a ggplot showing the increased number of communities and singletons along with the decreased delta
-
+#' @examples
+#' library(aKNNO)
+#' obj<-readRDS(url("https://www.dropbox.com/s/f5khi1zperqkybg/Mouse_Brain_Serial_Section1_SagittalPosterior_rawimage_object.rds?dl=1"))
+#' res <- FindOptimalDelta(obj)
+#' #plot the increasing number of communities/singletons with decreasing delta values
+#' res$plot_delta
+#' # the optimal delta is -0.8
+#' res$opt_delta
 #' @export
+
 
 FindOptimalDelta<-function(obj,reduction="pca",delta=c(-1,0),cutoff=5,kmax=20,prune.SNN=1/15,dims=1:50,verbose=T){
 
@@ -130,8 +138,8 @@ FindOptimalDelta<-function(obj,reduction="pca",delta=c(-1,0),cutoff=5,kmax=20,pr
 #'
 #' @examples
 #' library(aKNNO)
-#' load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
-#' obj <- FindNeighbors_aKNN(obj)
+#' obj<-readRDS(url("https://www.dropbox.com/s/f5khi1zperqkybg/Mouse_Brain_Serial_Section1_SagittalPosterior_rawimage_object.rds?dl=1"))
+#' obj <- FindNeighbors_aKNNO(obj)
 #' @export
 
 FindNeighbors_aKNNO<-function(obj,cluster=FALSE, reduction="pca",delta=c(-1,0), dims=1:50,kmax=20,prune.SNN=1/15, cutoff=5,verbose=T){

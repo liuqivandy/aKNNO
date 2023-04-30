@@ -28,12 +28,11 @@ FindNeighbors_aKNN(
 }
 \value{
 A Seurat object with a shared-adaptive-KNN graph (named as "aKNN") stored in the respective slot.
+
+library(aKNNO)
+obj<-readRDS(url("https://www.dropbox.com/s/f5khi1zperqkybg/Mouse_Brain_Serial_Section1_SagittalPosterior_rawimage_object.rds?dl=1"))
+obj <- FindNeighbors_aKNN(obj)
 }
 \description{
 An Adaptive K-Nearest-Neighbors Graph (aKNN) Construction Method for  Clustering of Single Cell and Spatial transcriptomics Data
-}
-\examples{
-library(aKNNO)
-load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
-obj <- FindNeighbors_aKNN(obj)
 }

@@ -43,6 +43,6 @@ An Adaptive K-Nearest-Neighbors Graph with Optimization (aKNNO) for Clustering o
 }
 \examples{
 library(aKNNO)
-load(system.file("data", "PBMC_toy.Rdata", package = "akNN"))
-obj <- FindNeighbors_aKNN(obj)
+obj<-readRDS(url("https://www.dropbox.com/s/f5khi1zperqkybg/Mouse_Brain_Serial_Section1_SagittalPosterior_rawimage_object.rds?dl=1"))
+obj <- FindNeighbors_aKNNO(obj)
 }

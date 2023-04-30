@@ -38,3 +38,12 @@ A list containing the optimal delta (opt_delta) and a ggplot showing the increas
 \description{
 Find the optimal delta to construct the adaptive nearest-neighbor graph
 }
+\examples{
+library(aKNNO)
+obj<-readRDS(url("https://www.dropbox.com/s/f5khi1zperqkybg/Mouse_Brain_Serial_Section1_SagittalPosterior_rawimage_object.rds?dl=1"))
+res <- FindOptimalDelta(obj)
+#plot the increasing number of communities/singletons with decreasing delta values
+res$plot_delta
+# the optimal delta is -0.8
+res$opt_delta
+}
