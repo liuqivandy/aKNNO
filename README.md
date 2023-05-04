@@ -37,6 +37,7 @@ obj <- FindNeighbors_aKNNO(obj)
 # Tutorial
 
 - [Analyze Mouse Instestinal Epithelium scRNAseq data](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/mouseInstestine.html)
+- [Analyze 10x Visium data from mouse brain sagittal posterior](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/mousebrain_SagittalPosterior.html)
 
 
 <a name="Citation"/>
