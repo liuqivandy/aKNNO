@@ -40,7 +40,7 @@ obj <- FindNeighbors_aKNNO(obj)
 - [Analyze 10x Visium data from mouse brain sagittal posterior](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/mousebrain_SagittalPosterior.html)
 - [Analyze Human Pancreas scRNAseq data](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/humanPancreas.html)
 - [Analyze Mouse Intestinal Organoid scRNAseq data](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/mouseInstestineOrganoids.html)
-- [Analyze Mouse Habenula scRNAseq data](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/mouseHabenula.html.html)
+- [Analyze Mouse Habenula scRNAseq data](https://htmlpreview.github.io/?https://github.com/liuqivandy/aKNNO/blob/master/Tutorial/mouseHabenula.html)
 
 
 <a name="Citation"/>
